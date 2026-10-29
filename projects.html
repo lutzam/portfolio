@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects | Amelie Lutz</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="logo">Amelie Lutz</a>
+    <ul>
+      <li><a href="projects.html" class="cur">Projects</a></li>
+      <li><a href="index.html#research">Research</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="index.html#involvement">Involvement</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="page-title">
+    <a class="back" href="index.html">← Back to home</a>
+    <h1>All Projects</h1>
+    <p>Engineering projects from coursework, competitions, and student teams.</p>
+  </div>
+
+  <!-- Filters: each button's data-f must match a card's data-cat -->
+  <div class="filters" id="filters">
+    <button class="on" data-f="all">All</button>
+    <button data-f="rocketry">Rocketry</button>
+    <button data-f="manufacturing">Additive Manufacturing</button>
+    <button data-f="nuclear">Nuclear</button>
+    <button data-f="vehicles">Vehicles &amp; Hyperloop</button>
+    <button data-f="other">Other</button>
+  </div>
+
+  <!--
+  TO ADD A PROJECT: copy one whole <article>...</article> block below, paste it
+  at the end of the grid, then change the text, image name, id and data-cat
+  (rocketry / manufacturing / nuclear / vehicles / other).
+  -->
+  <div class="grid g3" id="grid">
+
+    <article class="card" id="spaceport" data-cat="rocketry">
+      <figure class="ph wide">Project image<img src="images/project-1.jpg" alt="" onerror="this.style.display='none'"></figure>
+      <span class="tag">Rocketry · 2024</span>
+      <h3>Spaceport America Cup</h3>
+      <p>Aerostructures team, Rocketry at Virginia Tech. [Describe what you designed, built, or analyzed.]</p>
+    </article>
+
+    <article class="card" id="iam3d" data-cat="manufacturing">
+      <figure class="ph wide">Project image<img src="images/project-2.jpg" alt="" onerror="this.style.display='none'"></figure>
+      <span class="tag">Additive Mfg · 2021–2023</span>
+      <h3>ASME IAM3D Challenge</h3>
+      <p>1st place U.S. &amp; global (2023), 2nd U.S. / 4th global (2022), 4th U.S. / 12th global (2021). [Describe designs.]</p>
+    </article>
+
+    <article class="card" id="teststand" data-cat="rocketry">
+      <figure class="ph wide">Project image<img src="images/project-3.jpg" alt="" onerror="this.style.display='none'"></figure>
+      <span class="tag">Rocketry · 2022–2023</span>
+      <h3>Hybrid Test Stand Development</h3>
+      <p>Built for Ram Rocketry at VCU. [Add details.]</p>
+    </article>
+
+    <article class="card" data-cat="rocketry">
+      <figure class="ph wide">Project image<img src="images/project-4.jpg" alt="" onerror="this.style.display='none'"></figure>
+      <span class="tag">Rocketry · 2022</span>
+      <h3>Battle of the Rockets: Deployable Payload</h3>
+      <p>2nd place, 2022 (competed again in 2023). [Add details.]</p>
+    </article>
+
+    <article class="card" data-cat="vehicles">
+      <figure class="ph wide">Project image<img src="images/project-5.jpg" alt="" onerror="this.style.display='none'"></figure>
+      <span class="tag">Hyperloop · 2021–2022</span>
+      <h3>NASA Human Exploration Rover Challenge</h3>
+      <p>[Add details.]</p>
+    </article>
+
+    <article class="card" data-cat="vehicles">
+      <figure class="ph wide">Project image<img src="images/project-6.jpg" alt="" onerror="this.style.display='none'"></figure>
+      <span class="tag">Hyperloop · 2021</span>
+      <h3>The Boring Competition</h3>
+      <p>[Add details.]</p>
+    </article>
+
+    <article class="card" data-cat="vehicles">
+      <figure class="ph wide">Project image<img src="images/project-7.jpg" alt="" onerror="this.style.display='none'"></figure>
+      <span class="tag">Formula SAE · 2021–2022</span>
+      <h3>Formula SAE Competition</h3>
+      <p>Design Team Lead. [Add details.]</p>
+    </article>
+
+    <article class="card" data-cat="nuclear">
+      <figure class="ph wide">Project image<img src="images/project-8.jpg" alt="" onerror="this.style.display='none'"></figure>
+      <span class="tag">Capstone · 2023</span>
+      <h3>VCU Engineering Capstone</h3>
+      <p>Capstone Award recipient. [Add details.]</p>
+    </article>
+
+    <article class="card" data-cat="other">
+      <figure class="ph wide">Project image<img src="images/project-9.jpg" alt="" onerror="this.style.display='none'"></figure>
+      <span class="tag">[Category] · [Year]</span>
+      <h3>[Your next project]</h3>
+      <p>[Short description.]</p>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="see-all" href="index.html" style="margin:0">← Back to home</a>
+    <p style="margin-top:18px;font-size:12px">© <span id="yr">2026</span> Amelie Lutz</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const btns=document.querySelectorAll('#filters button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  btns.forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  document.querySelectorAll('#grid .card').forEach(c=>{
+    c.classList.toggle('hide',b.dataset.f!=='all'&&c.dataset.cat!==b.dataset.f);
+  });
+}));
+</script>
+</body>
+</html>
