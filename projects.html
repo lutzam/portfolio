@@ -6,6 +6,23 @@
 <title>Projects | Amelie Lutz</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* Compact cards with collapsible details */
+#grid{align-items:start}
+.card h3{font-size:16px;line-height:1.3;margin-bottom:10px}
+.det{border-top:1px solid var(--line);padding-top:10px}
+.det summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:600;color:var(--accent);user-select:none}
+.det summary::-webkit-details-marker{display:none}
+.det summary::after{content:"+";font-size:18px;line-height:1;font-weight:500}
+.det[open] summary::after{content:"\2212"}
+.det[open] summary{margin-bottom:10px}
+.det-body{overflow-wrap:anywhere}
+.det-body p{font-size:14px;color:#5a544b}
+.det-body ul{list-style:disc;padding-left:20px;font-size:14px;color:#5a544b}
+.det-body li{margin-bottom:6px;padding-left:2px}
+.det-body li:last-child{margin-bottom:0}
+</style>
 </head>
 <body>
 <nav>
@@ -50,77 +67,132 @@
       <figure class="ph wide">Project image<img src="images/project-10.jpg" alt="" onerror="this.style.display='none'"></figure>
       <span class="tag">Space · Jun–Aug 2025</span>
       <h3>Flight Qualification of Derivatization Methods for the NASA Dragonfly Mass Spectrometer</h3>
-      <p>NASA Goddard Space Flight Center. Prototyped a DraMS-like test bed for flight qualification experiments of DraMS derivatization capsules. Optimized a gas chromatograph (GC) program with tests of derivatized organic standards for calibration curve analysis, aiding identification of the chemically complex Titan surface.</p>
+      <details class="det">
+        <summary>See details</summary>
+        <div class="det-body">
+        <p>NASA Goddard Space Flight Center. Prototyped a DraMS-like test bed for flight qualification experiments of DraMS derivatization capsules. Optimized a gas chromatograph (GC) program with tests of derivatized organic standards for calibration curve analysis, aiding identification of the chemically complex Titan surface.</p>
+        </div>
+      </details>
     </article>
 
     <article class="card" data-cat="space">
       <figure class="ph wide">Project image<img src="images/project-11.jpg" alt="" onerror="this.style.display='none'"></figure>
       <span class="tag">Space · Jun–Aug 2025</span>
       <h3>Sample Path Leak Rates within NASA Dragonfly</h3>
-      <p>NASA Goddard Space Flight Center. Developed a dynamic model of leak rates within the DraMS gas processing system (GPS) to inform sample integrity from integration on Earth to surface operations on Titan.</p>
+      <details class="det">
+        <summary>See details</summary>
+        <div class="det-body">
+        <p>NASA Goddard Space Flight Center. Developed a dynamic model of leak rates within the DraMS gas processing system (GPS) to inform sample integrity from integration on Earth to surface operations on Titan.</p>
+        </div>
+      </details>
     </article>
 
     <article class="card" id="spaceport" data-cat="rocketry">
       <figure class="ph wide">Project image<img src="images/project-1.jpg" alt="" onerror="this.style.display='none'"></figure>
       <span class="tag">Rocketry · 2023–Present</span>
       <h3>Spaceport America Cup</h3>
-      <p>Rocket Design Engineer, Aerostructures team, Rocketry at Virginia Tech. Manufactured and assembled the rocket body and fins to enhance aerodynamic stability and control during flight, optimizing for performance and cost efficiency. 18th place 10k COTS / 29th overall (2025 IREC); 43rd overall (2024).</p>
+      <details class="det">
+        <summary>See details</summary>
+        <div class="det-body">
+        <p>Rocket Design Engineer, Aerostructures team, Rocketry at Virginia Tech. Manufactured and assembled the rocket body and fins to enhance aerodynamic stability and control during flight, optimizing for performance and cost efficiency. 18th place 10k COTS / 29th overall (2025 IREC); 43rd overall (2024).</p>
+        </div>
+      </details>
     </article>
 
     <article class="card" data-cat="space">
       <figure class="ph wide">Project image<img src="images/project-12.jpg" alt="" onerror="this.style.display='none'"></figure>
       <span class="tag">Space · Jan–May 2024</span>
       <h3>Trajectory Planning for Alternate Europa Clipper Missions</h3>
-      <p>Trajectory Modeling Lead. Developed contingency plans for NASA's Europa Clipper mission in case of delay, and for proactive planning of future missions to Europa or other outer solar system bodies. Optimized trajectories, comparing launch windows, time of flight, and total velocity requirements.</p>
+      <details class="det">
+        <summary>See details</summary>
+        <div class="det-body">
+        <p>Trajectory Modeling Lead. Developed contingency plans for NASA's Europa Clipper mission in case of delay, and for proactive planning of future missions to Europa or other outer solar system bodies. Optimized trajectories, comparing launch windows, time of flight, and total velocity requirements.</p>
+        </div>
+      </details>
     </article>
 
     <article class="card" data-cat="other">
       <figure class="ph wide">Project image<img src="images/project-13.jpg" alt="" onerror="this.style.display='none'"></figure>
       <span class="tag">Thermal · Jun–Aug 2024</span>
       <h3>Combustion Grant: Metasurfaces</h3>
-      <p>Johns Hopkins APL. Analyzed more than 26 metamaterial and substrate combinations to determine an optimal thermal response that guides heat away from sensitive components on hypersonic vehicles.</p>
+      <details class="det">
+        <summary>See details</summary>
+        <div class="det-body">
+        <p>Johns Hopkins APL. Analyzed more than 26 metamaterial and substrate combinations to determine an optimal thermal response that guides heat away from sensitive components on hypersonic vehicles.</p>
+        </div>
+      </details>
     </article>
 
     <article class="card" data-cat="manufacturing">
       <figure class="ph wide">Project image<img src="images/project-14.jpg" alt="" onerror="this.style.display='none'"></figure>
       <span class="tag">Additive Mfg · Jun–Aug 2024</span>
       <h3>Responsive Additive Manufacturing Structures for Controlling Thermal Events (ReACT)</h3>
-      <p>Johns Hopkins APL. Revolutionized the thermal analysis process for a batch of novel 3D-printed thermal switch structures through automation in Ansys, decreasing personnel effort by more than 99%.</p>
+      <details class="det">
+        <summary>See details</summary>
+        <div class="det-body">
+        <p>Johns Hopkins APL. Revolutionized the thermal analysis process for a batch of novel 3D-printed thermal switch structures through automation in Ansys, decreasing personnel effort by more than 99%.</p>
+        </div>
+      </details>
     </article>
 
     <article class="card" data-cat="space">
       <figure class="ph wide">Project image<img src="images/project-15.jpg" alt="" onerror="this.style.display='none'"></figure>
       <span class="tag">Space · Jun–Aug 2024</span>
       <h3>Thermal Analysis of a Subscale Rotor Stack for NASA Dragonfly</h3>
-      <p>Johns Hopkins APL. Conducted thermal analysis and rapid prototyping on a scaled Dragonfly rotor stack to ensure thermal integrity and readiness for the subscale wind tunnel model preliminary design review.</p>
+      <details class="det">
+        <summary>See details</summary>
+        <div class="det-body">
+        <p>Johns Hopkins APL. Conducted thermal analysis and rapid prototyping on a scaled Dragonfly rotor stack to ensure thermal integrity and readiness for the subscale wind tunnel model preliminary design review.</p>
+        </div>
+      </details>
     </article>
 
     <article class="card" data-cat="other">
       <figure class="ph wide">Project image<img src="images/project-16.jpg" alt="" onerror="this.style.display='none'"></figure>
       <span class="tag">Assistive Tech · Jun–Aug 2024</span>
       <h3>Enhancing Workplace Accessibility via Assistive Communication Technologies</h3>
-      <p>Johns Hopkins APL. Prototyped a meeting transcription device to address the challenges of hearing-impaired individuals in classified workspaces, leading to its selection by the APL ADA President for further development.</p>
+      <details class="det">
+        <summary>See details</summary>
+        <div class="det-body">
+        <p>Johns Hopkins APL. Prototyped a meeting transcription device to address the challenges of hearing-impaired individuals in classified workspaces, leading to its selection by the APL ADA President for further development.</p>
+        </div>
+      </details>
     </article>
 
     <article class="card" data-cat="other">
       <figure class="ph wide">Project image<img src="images/project-17.jpg" alt="" onerror="this.style.display='none'"></figure>
       <span class="tag">Software · Jun–Aug 2023</span>
       <h3>Enhancing Software Robustness for Missile Performance Applications</h3>
-      <p>Johns Hopkins APL. Improved documentation and constructed more than 25 class-based unit tests for analysis codes used significantly within the Missile &amp; Reentry Performance group.</p>
+      <details class="det">
+        <summary>See details</summary>
+        <div class="det-body">
+        <p>Johns Hopkins APL. Improved documentation and constructed more than 25 class-based unit tests for analysis codes used significantly within the Missile &amp; Reentry Performance group.</p>
+        </div>
+      </details>
     </article>
 
     <article class="card" data-cat="other">
       <figure class="ph wide">Project image<img src="images/project-18.jpg" alt="" onerror="this.style.display='none'"></figure>
       <span class="tag">Design · Jun–Aug 2023</span>
       <h3>Design and Iterative Development of a Reentry Body Turnover Tool</h3>
-      <p>Johns Hopkins APL. Engineered and refined 6 iterative design prototypes of a reentry body turnover tool for U.S. Navy applications, improving functionality, usability, and alignment with operational requirements.</p>
+      <details class="det">
+        <summary>See details</summary>
+        <div class="det-body">
+        <p>Johns Hopkins APL. Engineered and refined 6 iterative design prototypes of a reentry body turnover tool for U.S. Navy applications, improving functionality, usability, and alignment with operational requirements.</p>
+        </div>
+      </details>
     </article>
 
     <article class="card" data-cat="other">
       <figure class="ph wide">Project image<img src="images/project-19.jpg" alt="" onerror="this.style.display='none'"></figure>
       <span class="tag">Design · Jun–Aug 2023</span>
       <h3>Rapid-Response System to Reduce Emergency Times in Rural Areas</h3>
-      <p>Johns Hopkins APL. Designed and iteratively refined a novel emergency response device, reducing response times for rural car crashes by over 41% and improving access to timely emergency care.</p>
+      <details class="det">
+        <summary>See details</summary>
+        <div class="det-body">
+        <p>Johns Hopkins APL. Designed and iteratively refined a novel emergency response device, reducing response times for rural car crashes by over 41% and improving access to timely emergency care.</p>
+        </div>
+      </details>
     </article>
 
     
@@ -129,22 +201,37 @@
       <figure class="ph wide">Project image<img src="images/project-4.jpg" alt="" onerror="this.style.display='none'"></figure>
       <span class="tag">Rocketry · 2021–2023</span>
       <h3>Battle of the Rockets: Deployable Sensor Payload</h3>
-      <p>Founded an organization of more than 25 members to promote experiential learning in aerospace through professional development and the engineering of VCU's first rocket. Produced a rocket and payload system to launch up to 1300 feet and operate under a controlled descent, placing 2nd nationally in 2022 (competed again in 2023).</p>
+      <details class="det">
+        <summary>See details</summary>
+        <div class="det-body">
+        <p>Founded an organization of more than 25 members to promote experiential learning in aerospace through professional development and the engineering of VCU's first rocket. Produced a rocket and payload system to launch up to 1300 feet and operate under a controlled descent, placing 2nd nationally in 2022 (competed again in 2023).</p>
       <a class="more" href="https://egr.vcu.edu/news-events/news/07072023-engineering-students-compete-at-battle-of-the-rockets.html" target="_blank" rel="noopener">Read the news article →</a>
+        </div>
+      </details>
     </article>
 
     <article class="card" id="teststand" data-cat="rocketry">
       <figure class="ph wide">Project image<img src="images/project-3.jpg" alt="" onerror="this.style.display='none'"></figure>
       <span class="tag">Rocketry · 2021–2022</span>
       <h3>Hybrid Test Stand Development</h3>
-      <p>Ram Rocketry at VCU. Facilitated the research and development of the test stand for VCU's first hybrid-propellant rocket, including the design constraints, failsafe system, and overall structure of the device.</p>
+      <details class="det">
+        <summary>See details</summary>
+        <div class="det-body">
+        <p>Ram Rocketry at VCU. Facilitated the research and development of the test stand for VCU's first hybrid-propellant rocket, including the design constraints, failsafe system, and overall structure of the device.</p>
+        </div>
+      </details>
     </article>
 
     <article class="card" id="iam3d" data-cat="manufacturing">
       <figure class="ph wide">Project image<img src="images/project-2.jpg" alt="" onerror="this.style.display='none'"></figure>
       <span class="tag">Additive Mfg · 2021–2023</span>
       <h3>ASME IAM3D Challenge</h3>
-      <p>1st place U.S. &amp; global (2023), 2nd U.S. / 4th global (2022), 4th U.S. / 12th global (2021). As Project Supervisor of the Hovercraft Resupply Vehicle Challenge, orchestrated more than 30 members to develop an additively manufactured hovercraft for unmanned emergency resupply, and created the technical drawings and report that placed 1st at the 2023 ASME EFx event hosted by MSOE.</p>
+      <details class="det">
+        <summary>See details</summary>
+        <div class="det-body">
+        <p>1st place U.S. &amp; global (2023), 2nd U.S. / 4th global (2022), 4th U.S. / 12th global (2021). As Project Supervisor of the Hovercraft Resupply Vehicle Challenge, orchestrated more than 30 members to develop an additively manufactured hovercraft for unmanned emergency resupply, and created the technical drawings and report that placed 1st at the 2023 ASME EFx event hosted by MSOE.</p>
+        </div>
+      </details>
     </article>
 
     
@@ -155,38 +242,63 @@
       <figure class="ph wide">Project image<img src="images/project-8.jpg" alt="" onerror="this.style.display='none'"></figure>
       <span class="tag">Capstone · 2023</span>
       <h3>VCU Engineering Capstone</h3>
-      <p>Capstone Award recipient. [Add details.]</p>
+      <details class="det">
+        <summary>See details</summary>
+        <div class="det-body">
+        <p>Capstone Award recipient. [Add details.]</p>
+        </div>
+      </details>
     </article>
 
     <article class="card" data-cat="vehicles">
       <figure class="ph wide">Project image<img src="images/project-5.jpg" alt="" onerror="this.style.display='none'"></figure>
       <span class="tag">Hyperloop · 2021–2022</span>
       <h3>NASA Human Exploration Rover Challenge</h3>
-      <p>[Add details.]</p>
+      <details class="det">
+        <summary>See details</summary>
+        <div class="det-body">
+        <p>[Add details.]</p>
+        </div>
+      </details>
     </article>
 
     <article class="card" data-cat="vehicles">
       <figure class="ph wide">Project image<img src="images/project-6.jpg" alt="" onerror="this.style.display='none'"></figure>
       <span class="tag">Hyperloop · 2021</span>
       <h3>The Boring Competition</h3>
-      <p>[Add details.]</p>
+      <details class="det">
+        <summary>See details</summary>
+        <div class="det-body">
+        <p>[Add details.]</p>
+        </div>
+      </details>
     </article>
 
     <article class="card" data-cat="vehicles">
       <figure class="ph wide">Project image<img src="images/project-7.jpg" alt="" onerror="this.style.display='none'"></figure>
       <span class="tag">Formula SAE · 2021–2022</span>
       <h3>Formula SAE Competition</h3>
-      <p>Design Team Lead. [Add details.]</p>
+      <details class="det">
+        <summary>See details</summary>
+        <div class="det-body">
+        <p>Design Team Lead. [Add details.]</p>
+        </div>
+      </details>
     </article>
 
     <article class="card" data-cat="vehicles">
-      <figure class="ph wide">Project image<img src="images/project-.jpg" alt="" onerror="this.style.display='none'"></figure>
+      <figure class="ph wide">Project image<img src="images/project-9.jpg" alt="" onerror="this.style.display='none'"></figure>
       <span class="tag">Hyperloop · Jan 2021 - May 2021</span>
       <h3>VCU Hyperloop Pod</h3>
-      <ul>
+      <details class="det">
+        <summary>See details</summary>
+        <div class="det-body">
+        <ul>
         <li>Conducted an in-depth analysis for the optimization of VCU's Hyperloop pod chosen for participation in the 2018 Hyperloop Competition.</li> 
         <li>Researched improvements for the pod's current levitation system.</li>
       </ul>
+        </div>
+      </details>
     </article>
 
   </div>
